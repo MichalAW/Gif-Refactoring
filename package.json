@@ -1,0 +1,25 @@
+{
+    "name": "19.5.Gif-Refactoring",
+    "version": "1.0.0",
+    "description": "",
+    "main": "script.js",
+    "scripts": {
+        "start:babel": "babel script.js --watch--out-file script-compiled.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/MichalAW/19.5.Gif-Refactoring.git"
+    },
+    "keywords": [],
+    "author": "MichalAW michal.wanta@gmail.com",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/MichalAW/19.5.Gif-Refactoring/issues"
+    },
+    "homepage": "https://github.com/MichalAW/19.5.Gif-Refactoring#readme",
+    "devDependencies": {
+        "http-server": "^0.11.1"
+    },
+    "dependencies": {
+    }
+}
