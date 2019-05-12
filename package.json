@@ -1,5 +1,5 @@
 {
-    "name": "18.8.Gif-search-engine",
+    "name": "19.5.Gif-Refactoring",
     "version": "1.0.0",
     "description": "",
     "main": "script.js",
@@ -17,21 +17,18 @@
         "build:sass": "node-sass --output-style compact -o css sass",
         "build:autoprefixer": "autoprefixer-cli css/style.css",
         "build-dev:sass": "node-sass --output-style expanded --source-map true -o css sass",
-        "watch": "npm-run-all build -p watch:*",
-        "watch:sassprefixer": "node-sass --output-style expanded --source-map true -o css sass --watch && onchange -d 100 css/style.css -- autoprefixer-cli -o css/style.prefixed.css css/style.css",
-        "watch:browsersync": "browser-sync start --server --files css/*.css *.html"
     },
     "repository": {
         "type": "git",
-        "url": "https://github.com/MichalAW/18.8.Gif-search-engine.git"
+        "url": "https://github.com/MichalAW/19.5.Gif-Refactoring.git"
     },
     "keywords": [],
     "author": "MichalAW michal.wanta@gmail.com",
     "license": "ISC",
     "bugs": {
-        "url": "https://github.com/MichalAW/18.8.Gif-search-engine/issues"
+        "url": "https://github.com/MichalAW/19.5.Gif-Refactoring/issues"
     },
-    "homepage": "https://github.com/MichalAW/18.8.Gif-search-engine#readme",
+    "homepage": "https://github.com/MichalAW/19.5.Gif-Refactoring#readme",
     "devDependencies": {
         "autoprefixer-cli": "^1.0.0",
         "browser-sync": "^2.26.3",
