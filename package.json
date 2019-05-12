@@ -16,7 +16,7 @@
         "build:clean": "rimraf css/style.css",
         "build:sass": "node-sass --output-style compact -o css sass",
         "build:autoprefixer": "autoprefixer-cli css/style.css",
-        "build-dev:sass": "node-sass --output-style expanded --source-map true -o css sass",
+        "build-dev:sass": "node-sass --output-style expanded --source-map true -o css sass"
     },
     "repository": {
         "type": "git",

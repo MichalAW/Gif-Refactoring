@@ -12,14 +12,14 @@ App = React.createClass({
 
     handleSearch: function (searchingText) {
         this.setState({
-            loading: true
+            loading: true 
         });
 
-        this.getGif(searchingText, function (gif) {
+        this.getGif(searchingText, function (gif) { 
             this.setState({
-                loading: false,
-                gif: gif,
-                searchingText: searchingText
+                loading: false, 
+                gif: gif, 
+                searchingText: searchingText 
             });
         }.bind(this));
     },
@@ -30,18 +30,18 @@ App = React.createClass({
         xhr.open('GET', url);
         xhr.onload = function () {
             if (xhr.status === 200) {
-                var data = JSON.parse(xhr.responseText).data;
-                var gif = {
+                var data = JSON.parse(xhr.responseText).data; 
+                var gif = { 
                     url: data.fixed_width_downsampled_url,
                     sourceUrl: data.url
                 };
-                callback(gif);
+                callback(gif); 
             }
         };
         xhr.send();
     },
 
-    render: function () {
+    render: function() {
 
         var styles = {
             margin: '0 auto',
@@ -55,7 +55,7 @@ App = React.createClass({
                 <p>Find gif on
                     <a href='http://giphy.com'>gif</a>.Press enter to get more gifs.
                 </p>
-                <Search onSearch={this.handleSearch} />
+                <Search onSearch={this.handleSearch}/>
                 <Gif
                     loading={this.state.loading}
                     url={this.state.gif.url}
