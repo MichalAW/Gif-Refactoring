@@ -1,3 +1,5 @@
+import "@babel/polyfill";
+
 var GIPHY_LOADING_URL = 'http://www.ifmo.ru/images/loader.gif';
 var styles = {
     minHeight: '310px',
