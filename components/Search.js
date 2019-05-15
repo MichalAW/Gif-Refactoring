@@ -28,19 +28,18 @@ Search = React.createClass({
             maxWidth: '350px'
         };
 
-        return 
-                <label
-                    htmlFor="searchText"
-                />,
+        return (
+            <label htmlFor="searchText">Enter text:/></label>,
 
-                <input
-                    type="text"
-                    id="searchText"
-                    onChange={this.handleChange}
-                    onKeyUp={this.handleKeyUp}
-                    placeholder="Enter the search phrase here"
-                    style={styles}
-                    value={this.state.searchTerm}
-                />
+            <input
+                type="text"
+                id="searchText"
+                onChange={this.handleChange}
+                onKeyUp={this.handleKeyUp}
+                placeholder="Enter the search phrase here"
+                style={styles}
+                value={this.state.searchTerm}
+            />
+        )
     }
 });
