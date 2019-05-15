@@ -12,35 +12,40 @@ App = React.createClass({
         };
     },
 
+    
     handleSearch: function (searchingText) {
         this.setState({
             loading: true 
         });
 
-        this.getGif(searchingText, function (gif) { 
+        this.getGif2(searchingText).then(function (gif) {
             this.setState({
-                loading: false, 
-                gif: gif, 
-                searchingText: searchingText 
+                loading: false,
+                gif: gif,
+                searchingText: searchingText
             });
-        }.bind(this));
+        })
     },
 
-    getGif: function (searchingText, callback) {
-        var url = GIPHY_API_URL + '/v1/gifs/random?api_key=' + GIPHY_PUB_KEY + '&tag=' + searchingText; // 2.
-        var xhr = new XMLHttpRequest(); // 3.
-        xhr.open('GET', url);
-        xhr.onload = function () {
-            if (xhr.status === 200) {
-                var data = JSON.parse(xhr.responseText).data; 
-                var gif = { 
-                    url: data.fixed_width_downsampled_url,
-                    sourceUrl: data.url
+    getGif2: function (searchingText) {
+        return new Promise(
+            function(resolve, reject) {
+                var url = GIPHY_API_URL + '/v1/gifs/random?api_key=' + GIPHY_PUB_KEY + '&tag=' + searchingText; // 2.
+                var xhr = new XMLHttpRequest(); // 3.
+                xhr.open('GET', url);
+                xhr.onload = function () {
+                    if (xhr.status === 200) {
+                        var data = JSON.parse(xhr.responseText).data;
+                        var gif = {
+                            url: data.fixed_width_downsampled_url,
+                            sourceUrl: data.url
+                        };
+                        resolve(gif);
+                    } else {reject(new Error('wrong responde'))}
                 };
-                callback(gif); 
+                xhr.send();
             }
-        };
-        xhr.send();
+        );
     },
 
     render: function() {
