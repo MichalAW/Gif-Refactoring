@@ -1,4 +1,4 @@
-import "@babel/polyfill";
+// import "@babel/polyfill";
 
 var GIPHY_API_URL = 'https://api.giphy.com';
 var GIPHY_PUB_KEY = '2qXggAo5zLivyMCKhqI3ltgXuuWuptTr';
