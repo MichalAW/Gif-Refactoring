@@ -1,4 +1,3 @@
-
 Search = React.createClass({
     getInitialState() {
         return {
