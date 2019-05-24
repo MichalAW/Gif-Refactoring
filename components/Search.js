@@ -1,4 +1,3 @@
-// import "@babel/polyfill";
 
 Search = React.createClass({
     getInitialState() {
